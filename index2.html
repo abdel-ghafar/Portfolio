@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostafa Abdelghafar | Market Research Analyst & Data Analyst Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1000;
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .nav-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Scroll Buttons */
+        .scroll-buttons {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 999;
+        }
+
+        .scroll-btn {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            animation: bounceIn 0.6s ease;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .scroll-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .section:nth-child(1) { animation-delay: 0.1s; }
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.3s; }
+        .section:nth-child(4) { animation-delay: 0.4s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
+        .section:nth-child(6) { animation-delay: 0.6s; }
+        .section:nth-child(7) { animation-delay: 0.7s; }
+        .section:nth-child(8) { animation-delay: 0.8s; }
+        .section:nth-child(9) { animation-delay: 0.9s; }
+        .section:nth-child(10) { animation-delay: 1s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .section-title:hover {
+            transform: translateX(10px);
+        }
+
+        /* Photo Carousel - INFINITE LOOP */
+        .photo-slider-container {
+            max-width: 90%;
+            margin: 30px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .photo-slider-wrapper {
+            overflow: hidden;
+            position: relative;
+            height: auto;
+            min-height: 400px;
+            background: #667eea;
+        }
+
+        .photo-slider {
+            display: flex;
+            gap: 2px;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .photo-slide {
+            min-width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #667eea;
+            flex-shrink: 0;
+        }
+
+        .photo-slide img {
+            width: auto;
+            height: auto;
+            max-height: 600px;
+            max-width: 100%;
+            object-fit: scale-down;
+            background: #667eea;
+        }
+
+        /* Arrow Buttons */
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(102, 126, 234, 0.9);
+            color: white;
+            border: none;
+            padding: 20px 15px;
+            cursor: pointer;
+            font-size: 2em;
+            transition: all 0.3s ease;
+            z-index: 100;
+            font-weight: bold;
+        }
+
+        .slider-btn:hover {
+            background: rgba(102, 126, 234, 1);
+            padding: 20px 20px;
+        }
+
+        .slider-btn:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .slider-btn.prev {
+            left: 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .slider-btn.next {
+            right: 0;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .info-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .info-item strong {
+            color: #667eea;
+        }
+
+        /* LinkedIn Posts Section - UPDATED */
+        .linkedin-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .linkedin-post-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            border-left: 4px solid #0077b5;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .linkedin-post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 119, 181, 0.3);
+            border-left-width: 8px;
+        }
+
+        .linkedin-post-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #0077b5;
+        }
+
+        .linkedin-post-content {
+            padding: 15px;
+        }
+
+        /* ✅ شلنا الـ h4 من هنا */
+
+        .linkedin-post-card p {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        /* ✅ اللوجو اتحرك من اليمين للشمال فوق */
+        .linkedin-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px; /* كان right: 10px */
+            background: #0077b5;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            z-index: 10;
+        }
+
+        .view-post-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, #0077b5 0%, #005582 100%);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .view-post-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 119, 181, 0.4);
+        }
+
+        .experience-item, .project-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+            border-left-width: 8px;
+        }
+
+        .experience-item h3 {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        .experience-item .position {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .experience-item .date {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .experience-item ul {
+            list-style-position: inside;
+            margin-left: 10px;
+        }
+
+        .experience-item li {
+            margin-bottom: 8px;
+            padding-left: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .certifications-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .cert-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .cert-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.2);
+        }
+
+        .highlights {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .highlights:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .highlights ul {
+            list-style-position: inside;
+            margin-left: 10px;
+        }
+
+        .highlights li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            transform: scale(1.1);
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+
+            .nav-bar {
+                padding: 10px;
+            }
+
+            .nav-btn {
+                padding: 8px 15px;
+                font-size: 0.8em;
+            }
+
+            .scroll-buttons {
+                right: 15px;
+                bottom: 15px;
+            }
+
+            .scroll-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2em;
+            }
+
+            .linkedin-posts {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-slide img {
+                max-height: 400px;
+            }
+        }
+
+        .soft-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .soft-skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .soft-skill-tag:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="nav-bar" id="navbar">
+            <button class="nav-btn" onclick="scrollToSection('about')">About Me</button>
+            <button class="nav-btn" onclick="scrollToSection('summary')">Summary</button>
+            <button class="nav-btn" onclick="scrollToSection('experience')">Experience</button>
+            <button class="nav-btn" onclick="scrollToSection('technical')">Technical Skills</button>
+            <button class="nav-btn" onclick="scrollToSection('soft')">Soft Skills</button>
+            <button class="nav-btn" onclick="scrollToSection('linkedin')">LinkedIn Posts</button>
+            <button class="nav-btn" onclick="scrollToSection('certifications')">Certifications</button>
+            <button class="nav-btn" onclick="scrollToSection('education')">Education</button>
+            <button class="nav-btn" onclick="scrollToSection('impact')">Impact</button>
+            <button class="nav-btn" onclick="scrollToSection('vision')">Vision</button>
+            <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
+        </nav>
+
+        <header id="top">
+            <h1>Mostafa Abdelghafar</h1>
+            <p>Market Research Analyst & Data Analyst Portfolio</p>
+        </header>
+
+        <div class="content">
+            <!-- About Me Section -->
+            <section class="section" id="about">
+                <h2 class="section-title">👤 About Me</h2>
+                
+                <div class="photo-slider-container">
+                    <div class="photo-slider-wrapper">
+                        <div class="photo-slider" id="photoSlider">
+                            <!-- المجموعة الأولى -->
+                            <div class="photo-slide"><img src="images/Personal Photos/photo1.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo2.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo3.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo4.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo5.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo6.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo7.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo8.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo9.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo10.JPG" alt="Mostafa Abdelghafar"></div>
+                            
+                            <!-- المجموعة التانية -->
+                            <div class="photo-slide"><img src="images/Personal Photos/photo1.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo2.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo3.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo4.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo5.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo6.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo7.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo8.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo9.JPG" alt="Mostafa Abdelghafar"></div>
+                            <div class="photo-slide"><img src="images/Personal Photos/photo10.JPG" alt="Mostafa Abdelghafar"></div>
+                        </div>
+                    </div>
+                    
+                    <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+
+                <p style="font-size: 1.1em; margin-bottom: 20px; text-align: center; margin-top: 20px;">
+                    Data Analyst & Market Research Analyst passionate about transforming raw data and business needs into actionable insights, strategies, and tangible results. I build clarity out of complexity and always focus on business impact.
+                </p>
+                
+                <div class="info-grid">
+                    <div class="info-item"><strong>Based in:</strong> Cairo, Egypt</div>
+                    <div class="info-item"><strong>Email:</strong> <a href="mailto:mostafaabdelghafar7@gmail.com">mostafaabdelghafar7@gmail.com</a></div>
+                    <div class="info-item"><strong>Languages:</strong> Arabic (Native), English (Professional)</div>
+                    <div class="info-item"><strong>Born:</strong> 1998</div>
+                </div>
+            </section>
+
+            <!-- Professional Summary -->
+            <section class="section" id="summary">
+                <h2 class="section-title">🚀 Professional Summary</h2>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Senior Market Research Analyst (Royal Cement, Egypt)</h3>
+                    <ul style="list-style-position: inside; margin-left: 10px;">
+                        <li style="margin-bottom: 10px;">Proven track in analyzing market/competitor data, creating interactive dashboards, cleaning and organizing business data, and producing strategic executive presentations for C-level decisions.</li>
+                        <li style="margin-bottom: 10px;">Skilled in Excel, Power BI, SQL, Python, Agile project management, and stakeholder communication</li>
+                        <li style="margin-bottom: 10px;">Pursuing a diploma in Computer Science (Cairo University); BSc. in Mathematics & Statistics.</li>
+                        <li>Planning to pursue a Master's in Machine Learning</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Professional Experience -->
+            <section class="section" id="experience">
+                <h2 class="section-title">🏅 Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <h3>Royal Cement (Export Dept.)</h3>
+                    <div class="position">Senior Market Research Analyst</div>
+                    <div class="date">July 2025 – Present</div>
+                    <ul>
+                        <li>Analyzed export markets for 15+ countries using data from Globalwits & Veritrade</li>
+                        <li>Built Power BI dashboards (MoM/YoY growth, pricing, share, competitor tracking)</li>
+                        <li>Delivered advanced Excel/Power BI reports with feasibility analysis, competitive benchmarks, and price recommendations</li>
+                        <li>Cleaned, organized, and validated data from diverse sources for business use</li>
+                        <li>Designed presentations and data stories for top management and strategy sessions</li>
+                        <li>Led market segmentation analysis (volume, order trends, region-based insights)</li>
+                        <li>Collaborated deeply with Marketing/Planning/Operations</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Hayah Laboratories</h3>
+                    <div class="position">Data Analyst</div>
+                    <div class="date">Sep 2024 – Jul 2025</div>
+                    <ul>
+                        <li>Automated sales reporting in Excel (VBA/scripts)</li>
+                        <li>Built KPIs dashboards in Power BI, found sales trends</li>
+                        <li>Developed & optimized SQL databases/queries for reporting</li>
+                        <li>Automated processes, built fraud detection scripts</li>
+                        <li>Managed agile projects (Trello, Scrum)</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>NeuronetiX</h3>
+                    <div class="position">Data Analyst Intern (Remote)</div>
+                    <div class="date">Jul 2024 – Sep 2024</div>
+                    <ul>
+                        <li>Cleaned, visualized, and presented end-to-end data workflows in Excel, Python, and Power BI</li>
+                        <li>Collaborated with diverse teams remotely</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Freelance Client Analyses</h3>
+                    <ul>
+                        <li>Built interactive dashboards for Saudi business distribution (Upwork)</li>
+                        <li>Advised businesses on Gulf market opportunities (videos, Excel, Power BI)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Technical Skills -->
+            <section class="section" id="technical">
+                <h2 class="section-title">💻 Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Languages/Tools</h4>
+                        <p>Python (Pandas, NumPy, Matplotlib, Seaborn), SQL, Excel/VBA, Power BI</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Database</h4>
+                        <p>SQL, Google Sheets, Data Modeling</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Data Automation & Web Scraping</h4>
+                        <p>Requests, BeautifulSoup, Parsel</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Agile & Collaboration</h4>
+                        <p>Trello, Jira, Lucidchart</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Soft Skills -->
+            <section class="section" id="soft">
+                <h2 class="section-title">🧠 Soft Skills</h2>
+                <div class="soft-skills">
+                    <span class="soft-skill-tag">Analytical & Problem-Solving</span>
+                    <span class="soft-skill-tag">Stakeholder Communication</span>
+                    <span class="soft-skill-tag">Agile Mindset</span>
+                    <span class="soft-skill-tag">Process Optimization</span>
+                    <span class="soft-skill-tag">Storytelling with Data</span>
+                    <span class="soft-skill-tag">Fast Learner & Adaptable</span>
+                </div>
+            </section>
+
+            <!-- LinkedIn Featured Posts - UPDATED -->
+            <section class="section" id="linkedin">
+                <h2 class="section-title">🔗 Featured LinkedIn Content</h2>
+                <p style="margin-bottom: 20px; color: #666;">
+                    Check out my most engaging posts where I share insights about data analysis, market research, and industry trends.
+                </p>
+                <div class="linkedin-posts">
+                    <!-- ✅ Post 1 - شلنا Featured Post #1 -->
+                    <div class="linkedin-post-card" onclick="openLinkedInPost('https://www.linkedin.com/feed/update/urn:li:activity:7302260698879819777/')">
+                        <div class="linkedin-icon">in</div>
+                        <img src="images/Other photos/Linkedin Post Scr1.JPG" alt="LinkedIn Post" class="linkedin-post-image">
+                        <div class="linkedin-post-content">
+                            <p>Data insights and market analysis</p>
+                            <button class="view-post-btn">View on LinkedIn →</button>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Post 2 -->
+                    <div class="linkedin-post-card" onclick="openLinkedInPost('https://www.linkedin.com/feed/update/urn:li:activity:7339991802726264833/')">
+                        <div class="linkedin-icon">in</div>
+                        <img src="images/Other photos/Linkedin Post Scr2.JPG" alt="LinkedIn Post" class="linkedin-post-image">
+                        <div class="linkedin-post-content">
+                            <p>Market research strategies</p>
+                            <button class="view-post-btn">View on LinkedIn →</button>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Post 3 -->
+                    <div class="linkedin-post-card" onclick="openLinkedInPost('https://www.linkedin.com/feed/update/urn:li:activity:7302977421614497792/')">
+                        <div class="linkedin-icon">in</div>
+                        <img src="images/Other photos/Linkedin Post Scr3.JPG" alt="LinkedIn Post" class="linkedin-post-image">
+                        <div class="linkedin-post-content">
+                            <p>Industry analysis and trends</p>
+                            <button class="view-post-btn">View on LinkedIn →</button>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Post 4 -->
+                    <div class="linkedin-post-card" onclick="openLinkedInPost('https://www.linkedin.com/feed/update/urn:li:activity:7369753717018968065/')">
+                        <div class="linkedin-icon">in</div>
+                        <img src="images/Other photos/Linkedin Post Scr4.JPG" alt="LinkedIn Post" class="linkedin-post-image">
+                        <div class="linkedin-post-content">
+                            <p>Data-driven insights</p>
+                            <button class="view-post-btn">View on LinkedIn →</button>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Post 5 -->
+                    <div class="linkedin-post-card" onclick="openLinkedInPost('https://www.linkedin.com/feed/update/urn:li:activity:7316731814591524865/')">
+                        <div class="linkedin-icon">in</div>
+                        <img src="images/Other photos/Linkedin Post Scr5.JPG" alt="LinkedIn Post" class="linkedin-post-image">
+                        <div class="linkedin-post-content">
+                            <p>Professional development</p>
+                            <button class="view-post-btn">View on LinkedIn →</button>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Post 6 -->
+                    <div class="linkedin-post-card" onclick="openLinkedInPost('https://www.linkedin.com/feed/update/urn:li:activity:7373066991793889280/')">
+                        <div class="linkedin-icon">in</div>
+                        <img src="images/Other photos/Linkedin Post Scr6.JPG" alt="LinkedIn Post" class="linkedin-post-image">
+                        <div class="linkedin-post-content">
+                            <p>Analytics best practices</p>
+                            <button class="view-post-btn">View on LinkedIn →</button>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Post 7 -->
+                    <div class="linkedin-post-card" onclick="openLinkedInPost('https://www.linkedin.com/feed/update/urn:li:activity:7369021732264861697/')">
+                        <div class="linkedin-icon">in</div>
+                        <img src="images/Other photos/Linkedin Post Scr7.JPG" alt="LinkedIn Post" class="linkedin-post-image">
+                        <div class="linkedin-post-content">
+                            <p>Business intelligence insights</p>
+                            <button class="view-post-btn">View on LinkedIn →</button>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Post 8 -->
+                    <div class="linkedin-post-card" onclick="openLinkedInPost('https://www.linkedin.com/feed/update/urn:li:activity:7385585709765554176/')">
+                        <div class="linkedin-icon">in</div>
+                        <img src="images/Other photos/Linkedin Post Scr8.JPG" alt="LinkedIn Post" class="linkedin-post-image">
+                        <div class="linkedin-post-content">
+                            <p>Career growth and learning</p>
+                            <button class="view-post-btn">View on LinkedIn →</button>
+                        </div>
+                    </div>
+
+                    <!-- ✅ Post 9 -->
+                    <div class="linkedin-post-card" onclick="openLinkedInPost('https://www.linkedin.com/feed/update/urn:li:activity:7388315476747243520/')">
+                        <div class="linkedin-icon">in</div>
+                        <img src="images/Other photos/Linkedin Post Scr9.JPG" alt="LinkedIn Post" class="linkedin-post-image">
+                        <div class="linkedin-post-content">
+                            <p>Data science applications</p>
+                            <button class="view-post-btn">View on LinkedIn →</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications -->
+            <section class="section" id="certifications">
+                <h2 class="section-title">📜 Certifications & Training</h2>
+                <div class="certifications-list">
+                    <div class="cert-item">Deloitte Australia Data Analytics Job Simulation — Forage, 2025</div>
+                    <div class="cert-item">ALX Certificate of Recognition — ALX Egypt, 2024</div>
+                    <div class="cert-item">ALX Freelancer Career Maker — ALX Egypt, 2024</div>
+                    <div class="cert-item">ALX AICE - AI Career Essentials — ALX Egypt, 2024</div>
+                    <div class="cert-item">Python for Data Science — IBM/Coursera, 2022</div>
+                    <div class="cert-item">Python for Data Science, AI and Development — IBM/Coursera, 2022</div>
+                    <div class="cert-item">Data Science Methodology — IBM/Coursera, 2022</div>
+                    <div class="cert-item">Tools for Data Science — IBM/Coursera, 2022</div>
+                    <div class="cert-item">What is Data Science — IBM/Coursera, 2022</div>
+                    <div class="cert-item">Population and Economic Statistics — CAPMAS Egypt, 2022</div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="section" id="education">
+                <h2 class="section-title">🎓 Education</h2>
+                <div class="experience-item">
+                    <h3>Diploma in Computer Science</h3>
+                    <div class="position">Cairo University</div>
+                    <div class="date">2022-2025</div>
+                </div>
+                <div class="experience-item">
+                    <h3>B.Sc. Mathematics & Statistics</h3>
+                    <div class="position">Zagazig University</div>
+                    <div class="date">2018-2022</div>
+                </div>
+            </section>
+
+            <!-- Value & Strategic Impact -->
+            <section class="section" id="impact">
+                <h2 class="section-title">🏆 Value & Strategic Impact</h2>
+                <div class="highlights">
+                    <h3 style="margin-bottom: 15px; color: #667eea;">As a Market Research Analyst & Data Professional:</h3>
+                    <ul>
+                        <li>Drive executive decision-making—connecting market signals to business action</li>
+                        <li>Deliver savings by optimizing targeting, logistics, and marketing spend</li>
+                        <li>Build forecasting models and market share analyses for expansion planning</li>
+                        <li>Bridge technical data with actionable recommendations for non-technical leaders</li>
+                    </ul>
+                    <h3 style="margin-top: 20px; margin-bottom: 15px; color: #667eea;">Recent Highlights:</h3>
+                    <ul>
+                        <li>Built global cement market databases for 100+ countries</li>
+                        <li>Coordinated cross-functional analytics workflows</li>
+                        <li>Enabled C-levels to make profitable, data-driven export decisions</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Professional Vision -->
+            <section class="section" id="vision">
+                <h2 class="section-title">📈 Professional Vision</h2>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px;">
+                    <ul style="list-style-position: inside; margin-left: 10px;">
+                        <li style="margin-bottom: 10px;">Specialize further in predictive analytics & AI-driven market research</li>
+                        <li style="margin-bottom: 10px;">Continue delivering strategies that multiply business value via data</li>
+                        <li>Build tools and dashboards that help teams see the "big picture" and act faster</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section" id="contact">
+            <h2 class="section-title" style="color: white; border-bottom: 3px solid white;">📢 Contact</h2>
+            <div class="contact-info">
+                <div>
+                    <strong>Email:</strong><br>
+                    <a href="mailto:mostafaabdelghafar7@gmail.com">mostafaabdelghafar7@gmail.com</a>
+                </div>
+                <div>
+                    <strong>Phone:</strong><br>
+                    <a href="tel:+201019388017">(+20) 1019388017</a>
+                </div>
+                <div>
+                    <strong>LinkedIn:</strong><br>
+                    <a href="https://www.linkedin.com/in/Mostafa-Abdelghafar/" target="_blank">linkedin.com/in/Mostafa-Abdelghafar</a>
+                </div>
+                <div>
+                    <strong>Location:</strong><br>
+                    Cairo, Egypt
+                </div>
+            </div>
+        </div>
+        
+        <div id="bottom"></div>
+    </div>
+
+    <!-- Scroll Buttons -->
+    <div class="scroll-buttons">
+        <button class="scroll-btn" onclick="scrollToTop()" title="Go to Top">↑</button>
+        <button class="scroll-btn" onclick="scrollToBottom()" title="Go to Bottom">↓</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 9;
+        let autoSlideInterval;
+        
+        function showSlide(n, withTransition = true) {
+            const slider = document.getElementById('photoSlider');
+            
+            if (!withTransition) {
+                slider.style.transition = 'none';
+            } else {
+                slider.style.transition = 'transform 0.6s ease-in-out';
+            }
+            
+            currentSlide = n;
+            const offset = -currentSlide * 100;
+            slider.style.transform = `translateX(${offset}%)`;
+            
+            if (currentSlide >= totalSlides) {
+                setTimeout(() => {
+                    currentSlide = 0;
+                    showSlide(0, false);
+                }, 600);
+            }
+            
+            if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+                showSlide(totalSlides - 1, false);
+            }
+        }
+        
+        function moveSlide(direction) {
+            clearInterval(autoSlideInterval);
+            showSlide(currentSlide + direction, true);
+            setTimeout(startAutoSlide, 5000);
+        }
+        
+        function autoSlide() {
+            currentSlide++;
+            showSlide(currentSlide, true);
+        }
+        
+        function startAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(autoSlide, 3000);
+        }
+        
+        showSlide(0, false);
+        startAutoSlide();
+
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToBottom() {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+
+        function openLinkedInPost(url) {
+            window.open(url, '_blank');
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
